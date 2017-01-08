@@ -10,6 +10,8 @@ var fullAge = true;
 console.log(fullAge);
 */
 
+//////////////////////////////////////////
+
 
 /*
 Lecture: varibales 2
@@ -27,6 +29,8 @@ isMarried = false;
 job = "teacher";
 console.log(job + " " + isMarried);
 */
+
+//////////////////////////////////////////
 
 
 /*
@@ -53,6 +57,8 @@ console.log(ageMark);
 
 */
 
+//////////////////////////////////////////
+
 
 /*
 Lecture: If/Else statements
@@ -77,10 +83,12 @@ if(!isMarried) {
 }
 */
 
+//////////////////////////////////////////
+
 
 /*
 Lecture: Boolean logic and switch statements
-*/
+
 var age = 20;
 
 if(age <  20) {
@@ -110,20 +118,51 @@ switch (job) {
 //////////////////////////////////////////
 
 // Code Challenge
+//
+// var ageMark = 20;
+// var ageSteve = 30;
+// var heightMark = 50;
+// var heightSteve = 140;
+//
+// var multMarkAge = ageMark * 5;
+// var drawMark = multMarkAge + heightMark;
+//
+// var multSteveAge = ageSteve * 5;
+// var drawSteve = multSteveAge + heightSteve;
+//
+// if(drawMark > drawSteve) {
+//   console.log('mark wins with' + drawMark);
+// } else {
+//   console.log('steve wins with' + drawSteve);
+// }
+*/
 
-var ageMark = 20;
-var ageSteve = 30;
-var heightMark = 50;
-var heightSteve = 140;
 
-var multMarkAge = ageMark * 5;
-var drawMark = multMarkAge + heightMark;
+/*
+Lecture: Functions
+*/
 
-var multSteveAge = ageSteve * 5;
-var drawSteve = multSteveAge + heightSteve;
-
-if(drawMark > drawSteve) {
-  console.log('mark wins with' + drawMark);
-} else {
-  console.log('steve wins with' + drawSteve);
+function calculateAge(yearOfBirth) {
+    var age = 2016 - yearOfBirth;
+    return age;
 }
+
+var ageJohn = calculateAge(1990); // calculateAge we call run and excute the function with argument 1990
+var ageMike = calculateAge(1969);
+var ageMary = calculateAge(1948);
+console.log(ageMary);
+
+function yearsUntilRetirement(name, year) {
+  var age = calculateAge(year);
+  var retirement = 65 - age;
+
+  if(retirement >= 0) {
+    console.log(name + ' retires in ' + retirement + ' years');
+  } else {
+    console.log(name + ' already retired');
+  }
+}
+
+yearsUntilRetirement('John', 1990);
+yearsUntilRetirement('Mike', 1969);
+yearsUntilRetirement('Mary', 1948);
