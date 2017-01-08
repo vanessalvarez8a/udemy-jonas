@@ -166,3 +166,15 @@ function yearsUntilRetirement(name, year) {
 yearsUntilRetirement('John', 1990);
 yearsUntilRetirement('Mike', 1969);
 yearsUntilRetirement('Mary', 1948);
+
+/*
+Lecture: Functions Statements and Expressions
+*/
+
+function someFun(par) { //This is a function statement performs an action
+  //code
+}
+
+var someFun = function(par) { // This is a function Expression produces an outcome, a value
+  //code
+}
