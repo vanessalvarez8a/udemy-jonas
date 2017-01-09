@@ -178,3 +178,63 @@ function someFun(par) { //This is a function statement performs an action
 var someFun = function(par) { // This is a function Expression produces an outcome, a value
   //code
 }
+
+/*
+Lecture:Arrays
+
+
+var names = ['John', 'Jane', 'Mark'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[0]);
+//Overwrite the Array
+names[1] = 'Ben';
+console.log(names);
+
+var john = ['John', 'Smith', 1990, 'teacher', false];
+
+john.push('blue'); // add element at the end of the array
+console.log(john);
+
+john.unshift('Mr.') // add element at the begining of the Array
+console.log(john);
+
+john.pop(); // remove from the last element of the array
+console.log(john);
+
+john.shift(); //remove from the begining
+console.log(john);
+
+console.log(john.indexOf('Smith')); //returns the position of the element that we pass into it
+
+if(john.indexOf('designer') === -1) { // we are checking if he is not a teacher
+  console.log('John is Not a designer');
+}
+*/
+
+/*
+Lecture: Objects
+*/
+
+var john = {
+  name: 'John',
+  lastName: 'Smith',
+  yearOfBirth: 1990,
+  job: 'teacher',
+  married: false
+}
+console.log(john.lastName);
+console.log(john['lastName']);
+
+john.lastName = 'Miller';
+john['job'] = 'Programmer';
+console.log(john);
+
+//  This is the second way to create an Object
+var jane = new Object();
+jane.name = 'Jane';
+jane.lastName = 'Pike';
+jane['yearOfBirth'] = 1969;
+jane['job'] = 'retired';
+jane['isMarried'] = true;
+console.log(jane);
