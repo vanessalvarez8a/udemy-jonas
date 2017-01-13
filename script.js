@@ -10,9 +10,7 @@ var fullAge = true;
 console.log(fullAge);
 */
 
-//////////////////////////////////////////
-
-
+//////////////////////////////////////////////////////////////////////
 /*
 Lecture: varibales 2
 
@@ -30,9 +28,10 @@ job = "teacher";
 console.log(job + " " + isMarried);
 */
 
-//////////////////////////////////////////
 
 
+
+//////////////////////////////////////////////////////////////////////
 /*
 Lecture: Operators
 
@@ -57,9 +56,10 @@ console.log(ageMark);
 
 */
 
-//////////////////////////////////////////
 
 
+
+//////////////////////////////////////////////////////////////////////
 /*
 Lecture: If/Else statements
 
@@ -83,9 +83,10 @@ if(!isMarried) {
 }
 */
 
-//////////////////////////////////////////
 
 
+
+//////////////////////////////////////////////////////////////////////
 /*
 Lecture: Boolean logic and switch statements
 
@@ -115,8 +116,10 @@ switch (job) {
       console.log('John does something else');
 }
 
-//////////////////////////////////////////
 
+
+
+//////////////////////////////////////////
 // Code Challenge
 //
 // var ageMark = 20;
@@ -138,9 +141,12 @@ switch (job) {
 */
 
 
+
+
+//////////////////////////////////////////////////////////////////////
 /*
 Lecture: Functions
-*/
+
 
 function calculateAge(yearOfBirth) {
     var age = 2016 - yearOfBirth;
@@ -166,7 +172,11 @@ function yearsUntilRetirement(name, year) {
 yearsUntilRetirement('John', 1990);
 yearsUntilRetirement('Mike', 1969);
 yearsUntilRetirement('Mary', 1948);
+*/
 
+
+
+//////////////////////////////////////////////////////////////////////
 /*
 Lecture: Functions Statements and Expressions
 */
@@ -179,6 +189,9 @@ var someFun = function(par) { // This is a function Expression produces an outco
   //code
 }
 
+
+
+//////////////////////////////////////////////////////////////////////
 /*
 Lecture:Arrays
 
@@ -212,17 +225,48 @@ if(john.indexOf('designer') === -1) { // we are checking if he is not a teacher
 }
 */
 
+
+//////////////////////////////////////////////////////////////////////
 /*
 Lecture: Objects
 */
 
-var john = {
+var john = { //object
   name: 'John',
   lastName: 'Smith',
   yearOfBirth: 1990,
   job: 'teacher',
-  married: false
+  married: false,
+  family: ['Jane', 'Mark', 'Bob'],
+  calculateAge: function() { //function expression!
+    return 2016 - this.yearOfBirth;
+  }
 }
+console.log(john.calculateAge());
+var age = john.calculateAge();
+
+//Now we will be adding a new key with value into the john object
+john.age = age;
+console.log(john);
+
+//There is another way to add a key into an object
+
+var maria = { //object
+  name: 'Maria',
+  lastName: 'Rodriguez',
+  yearOfBirth: 1986,
+  job: 'designer',
+  married: true,
+  family: ['Luisa', 'Mario', 'Helga'],
+  calculateAge: function() { //function expression!
+    this.age = 2016 - this.yearOfBirth;
+  }
+}
+
+maria.calculateAge();
+console.log(maria);
+
+
 console.log(john.lastName);
 console.log(john['lastName']);
 
@@ -238,3 +282,68 @@ jane['yearOfBirth'] = 1969;
 jane['job'] = 'retired';
 jane['married'] = true;
 console.log(jane);
+
+
+
+//////////////////////////////////////////////////////////////////////
+/*
+Lecture: Loops
+
+
+
+var variousNames = ['John', 'Jane', 'Mary', 'Mark', 'Bob']
+
+for (var i = 0; i < variousNames.length; i++) {
+  console.log(variousNames[i]);
+}
+
+// variousNames.length - 1 start the counter at number 4
+// i we need to be bigger and equal to 0 because we want to the first element which is john
+// i-- decreases the counter
+
+for(var i = variousNames.length - 1; i >= 0; i--) {
+  console.log(variousNames[i]);
+}
+
+
+// while loops it only has the condition that is evaluated before each iteration
+var i = 0; //first the counter is defined
+while(i < variousNames.length) {
+  console.log(variousNames[i]);
+  i++;
+}
+
+//Break loop: To break the loop at a certain point
+for (var i = 1; i <= 5; i++) {
+  console.log(i);
+  if (i === 3) break
+}
+
+//Continue what happens at the end of the loop
+for (var i = 1; i <= 5; i++) {
+  if (i === 3) continue;
+  console.log(i);
+}
+*/
+
+
+
+//////////////////////////////////////////////////////////////////////
+/* Code Challenge
+*/
+
+var yearsPersonsBorn = [1990, 1988, 1965, 1977];
+
+var emptyArray = [];
+
+for (var i = 0; i < yearsPersonsBorn.length; i++) {
+  emptyArray.push(yearsPersonsBorn[i])
+}
+
+console.log(emptyArray);
+
+for(var i = 0; i < emptyArray.length; i++) {
+  if(emptyArray[i] > 1998) {
+    console.log(emptyArray);
+  }
+}
