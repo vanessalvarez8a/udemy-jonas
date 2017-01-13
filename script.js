@@ -236,5 +236,5 @@ jane.name = 'Jane';
 jane.lastName = 'Pike';
 jane['yearOfBirth'] = 1969;
 jane['job'] = 'retired';
-jane['isMarried'] = true;
+jane['married'] = true;
 console.log(jane);
