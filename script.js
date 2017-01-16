@@ -334,16 +334,27 @@ for (var i = 1; i <= 5; i++) {
 
 var yearsPersonsBorn = [1990, 1988, 1965, 1977];
 
-var emptyArray = [];
+function printFullAge(yearsPersonsBorn) {
+  var emptyArray = [];
+  var fullAges = [];
 
-for (var i = 0; i < yearsPersonsBorn.length; i++) {
-  emptyArray.push(yearsPersonsBorn[i])
-}
-
-console.log(emptyArray);
-
-for(var i = 0; i < emptyArray.length; i++) {
-  if(emptyArray[i] > 1998) {
-    console.log(emptyArray);
+  for (var i = 0; i < yearsPersonsBorn.length; i++) {
+    var age = 2016 - yearsPersonsBorn[i]
+    emptyArray.push(age)
   }
+  console.log(emptyArray);
+
+  for(var i = 0; i < emptyArray.length; i++) {
+    if(emptyArray[i] >= 18) {
+      console.log('Person ' + (i + 1) + ' is ' + emptyArray[i]);
+      fullAges.push(true);
+    } else {
+      console.log('Person ' + (i + 1) + ' is Not older than 18 ' + emptyArray[i]);
+      fullAges.push(false);
+    }
+  }
+  return fullAges;
 }
+
+var full_1 = printFullAge(yearsPersonsBorn);
+var full_2 = printFullAge([2012, 1915, 1999]);
