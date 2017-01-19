@@ -75,7 +75,36 @@ function first() {
 
 function third() {
   var d = 'john';
-  console.log(c); // just because third() was invoked inside second() doesnt mean it has access
+  // console.log(c); // just because third() was invoked inside second() doesnt mean it has access
   // on whats inside the second() function this is and Error! c is not defined since is on a different
   // scope from the second() option
 }
+
+
+////////////////////////////////
+// Lecture: This keyword
+
+// console.log(this); // is the Window object
+
+var john = {
+  name:'john',
+  yearOfBirth: 1990,
+  calculateRetirement: function() {
+    console.log(this);
+    console.log(2016 - this.yearOfBirth);
+
+    function innerFunction() {
+      console.log(this); // Window Object although this is inside of a method it does not belong to the john object
+    }
+    innerFunction();
+  }
+}
+john.calculateRetirement();
+
+var mike = {
+  name: 'mike',
+  yearOfBirth: 1984
+}
+// THIS IS OBJECT BORROWING
+mike.calculateRetirement = john.calculateRetirement;
+mike.calculateRetirement();
